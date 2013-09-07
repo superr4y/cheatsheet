@@ -1,0 +1,26 @@
+======
+Links :
+======
+
+
+
+----
+git :
+----
+https://www.youtube.com/watch?v=ZDR433b0HJY  # awesome git introduction with Scott Chacon
+
+
+-----------
+torproject :
+-----------
+http://www.cl.cam.ac.uk/~sjm217/projects/anon/
+https://doxygen.torproject.org/index.html
+https://gitweb.torproject.org/
+
+
+
+-----
+misc :
+-----
+http://www.mvg-live.de/ims/dfiStaticAuswahl.svc
+
