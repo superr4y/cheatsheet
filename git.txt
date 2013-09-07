@@ -11,14 +11,15 @@ git branch <branch/newbranch>
 --------
 settings:
 --------
-git config --global alias.lol "alias.lol=log --oneline --graph --all --decorate"
+git config --global alias.lol "log --oneline --graph --all --decorate"
 git config --global alias.ca checkout
 git config --global alias.st status
+git config --global alias.br branch
 git config --global color.ui true
 git config --global color.status true
 git config --global user.name <username>
 git config --global user.email <email@git.com>
-credential.helper=cache
+git config --global credential.helper cache
 
 
 
