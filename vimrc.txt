@@ -1,0 +1,14 @@
+set number
+syntax on
+set smartindent
+set smarttab
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set enc=utf-8
+autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType python map <F5> :w<CR>:!python "%"<CR>
+autocmd FileType perl map <F5> :w<CR>:!perl "%"<CR>
+autocmd FileType ruby map <F5> :w<CR>:!ruby "%"<CR>
+autocmd FileType cpp  map <F5> :w<CR>:!make<CR>
+autocmd FileType c  map <F5> :w<CR>:!scons -Q<CR>:!./%:t:r<CR>
