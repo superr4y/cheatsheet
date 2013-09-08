@@ -1,0 +1,15 @@
+----------
+init ctags:
+----------
+apt-get install exuberant-ctags
+ctags -R .
+
+---
+vim:
+---
+
+ctrl+] => folow function
+ctrl+t => go back
+:ta main => go to main
+
+
