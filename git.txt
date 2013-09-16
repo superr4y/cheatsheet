@@ -6,6 +6,9 @@ git :
 git remote add <name> <url>
 git mergetool
 git branch <branch/newbranch>
+git checkout <branch>
+git pull
+git push origin <branch>
 
 
 --------
