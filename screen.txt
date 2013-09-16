@@ -1,0 +1,23 @@
+screen -S <name>   # create new screen session
+screen -ls         # list screen session
+screen -r <name>   # attach to screen session
+
+screen -d or C-a d # detach
+C-a <tab>          # switch screen (splitted window)
+C-a n              # next
+C-a p              # previous
+C-a S              # split window horizontal
+C-a V              # Split window vertical
+C-a X              # delete current window
+C-a <esc> or C-a [ # scroll in window
+C-a :              # command mode
+C-a ?              # show help
+
+
+
+##################################
+.screenrc
+#################################
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%w%=%m/%d %c"
