@@ -23,4 +23,5 @@ https://gitweb.torproject.org/
 misc :
 -----
 http://www.mvg-live.de/ims/dfiStaticAuswahl.svc
+http://www.thegeekstuff.com/2009/04/ctags-taglist-vi-vim-editor-as-sourece-code-browser/
 
