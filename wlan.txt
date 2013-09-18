@@ -1,0 +1,3 @@
+rfkill list
+rfkill unblock 1
+rfkill unblock all
