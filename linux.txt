@@ -1,2 +1,4 @@
 pm-hibernate
 acpi
+hdparm -B 255 /dev/sda
+acpi_listen
