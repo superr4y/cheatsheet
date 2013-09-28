@@ -1,0 +1,2 @@
+netsh interface ipv4 show interface
+netsh interface ipv4 set address "Lan-Verbindung" static 192.168.1.66 255.255.255.0 192.168.1.1
