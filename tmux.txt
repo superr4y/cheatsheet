@@ -1,0 +1,25 @@
+##############
+# .tmux.conf #
+##############
+
+set -g prefix C-a
+
+
+##############
+# Short Cuts #
+##############
+
+C-a c   =>  create new window
+C-a n   =>  switch to next window
+C-a f   =>  search for window name
+C-a ,   =>  rename window
+C-a o   =>  switch to sub-window
+C-a :   =>  command mode
+
+
+############
+# Commands #
+############
+
+split-window -v     =>      vertical split
+split-window -h     =>      horizontal split
