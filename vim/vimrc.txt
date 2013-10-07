@@ -6,7 +6,15 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set enc=utf-8
-autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+set hlsearch
+set wildmenu
+set nocompatible      " We're running Vim, not Vi!
+
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
+
+"autocmd FileT/ype python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType python map <F5> :w<CR>:!python "%"<CR>
 autocmd FileType perl map <F5> :w<CR>:!perl "%"<CR>
 autocmd FileType ruby map <F5> :w<CR>:!ruby "%"<CR>
