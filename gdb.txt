@@ -1,0 +1,14 @@
+gdb ./program -tui --command=init.gdb
+set disassembly-flavor intel
+b *0x12345678
+set {char} (0x12345678+66) = 0x90
+layout asm
+layout reg
+
+x/10x $esp
+x/10i $eip
+x/10i 0x12345678
+
+step into = si
+step over = ni
+
