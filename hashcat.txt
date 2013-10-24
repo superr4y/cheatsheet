@@ -1,0 +1,7 @@
+hashcat-cli64.bin -a 3 -m 100 hash.txt ?a?a?a?a?a?a
+hashcat-cli64.bin -a 3 -m 100 -1 ?u?d hash.txt ?1?1?1?1
+
+-a => attack mode
+-m => hash type
+-1 => custom charset
+
