@@ -3,7 +3,6 @@ TODO:
 - add python.txt
 - add iptables.txt
 - add sql.txt
-- add gdb.txt
 - add windbg.txt
 
 
