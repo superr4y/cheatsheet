@@ -1,0 +1,3 @@
+Multiple lines edit: ctrl+v [mark lines] I/A [edit] esc
+Switch to buffer X => :bX
+List all buffer => :ls
