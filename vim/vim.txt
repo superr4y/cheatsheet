@@ -6,3 +6,6 @@ Buffer
 :ls
 :b1/2/3..
 
+Multiple lines edit: ctrl+v [mark lines] I/A [edit] esc
+Switch to buffer X => :bX
+List all buffer => :ls
