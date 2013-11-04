@@ -20,7 +20,8 @@ autocmd FileType perl map <F5> :w<CR>:!perl "%"<CR>
 autocmd FileType ruby map <F5> :w<CR>:!ruby "%"<CR>
 autocmd FileType cpp  map <F5> :w<CR>:!make<CR>
 autocmd FileType c  map <F5> :w<CR>:!scons -Q<CR>:!./%:t:r<CR>
-autocmd FileType tex map <F5> :w<CR>:!pdflatex "%"<CR>
+autocmd FileType tex map <F5> :w<CR>:!./build.sh<CR>
+"autocmd FileType tex map <F5> :w<CR>:!pdflatex "%"<CR>
 
 " follow function
 map <c-f> <c-]> 
