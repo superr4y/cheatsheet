@@ -1,0 +1,8 @@
+Hex Editor:
+:%!xxd
+:%!xxd -r
+
+Buffer
+:ls
+:b1/2/3..
+
