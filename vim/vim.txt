@@ -9,3 +9,11 @@ Buffer
 Multiple lines edit: ctrl+v [mark lines] I/A [edit] esc
 Switch to buffer X => :bX
 List all buffer => :ls
+
+
+setlocal spell spelllang=de,en
+z=
+1z=
+zg
+
+
