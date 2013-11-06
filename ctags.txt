@@ -4,6 +4,9 @@ init ctags:
 apt-get install exuberant-ctags
 ctags -R .
 
+
+python import => --python-kinds=-i
+
 ---
 vim:
 ---
