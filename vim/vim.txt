@@ -12,6 +12,7 @@ List all buffer => :ls
 
 
 setlocal spell spelllang=de,en
+set spell!
 z=
 1z=
 zg
