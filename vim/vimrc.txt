@@ -9,8 +9,12 @@ set enc=utf-8
 set hlsearch
 set wildmenu
 set nocompatible      " We're running Vim, not Vi!
+set spell spelllang=de,en
 
+set background=dark
+colorscheme solarized
 filetype on           " Enable filetype detection
+
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
@@ -25,3 +29,20 @@ autocmd FileType tex map <F5> :w<CR>:!./build.sh<CR>
 
 " follow function
 map <c-f> <c-]> 
+map <c-s> :set spell!<CR>
+
+
+
+
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+"Bundle 'ctrlp'
+"Bundle 'surround'
+"Bundle 'endwise'
+Bundle 'https://github.com/davidhalter/jedi-vim'
+Bundle 'https://github.com/altercation/vim-colors-solarized.git'
+Bundle 'https://github.com/kien/ctrlp.vim'
