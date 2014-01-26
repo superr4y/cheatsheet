@@ -6,6 +6,7 @@
 (setq make-backup-files nil)
 
 (require 'org-install)
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((sh . true) (python . true))

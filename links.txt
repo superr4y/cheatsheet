@@ -27,3 +27,4 @@ http://www.thegeekstuff.com/2009/04/ctags-taglist-vi-vim-editor-as-sourece-code-
 http://www.wuala.com/
 https://github.com/veil-evasion/Veil
 http://leetmore.ctf.su/hack-lu-2010/
+http://exploit-exercises.com/
