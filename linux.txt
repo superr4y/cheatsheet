@@ -2,3 +2,4 @@ pm-hibernate
 acpi
 hdparm -B 255 /dev/sda
 acpi_listen
+setxkbmap -layout us -variant altgr-intl -option nodeadkeys
