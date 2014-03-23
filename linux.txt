@@ -3,3 +3,4 @@ acpi
 hdparm -B 255 /dev/sda
 acpi_listen
 setxkbmap -layout us -variant altgr-intl -option nodeadkeys
+xrandr --output DP2 --mode 1280x1024 --left-of eDP1
