@@ -5,3 +5,4 @@ acpi_listen
 setxkbmap -layout us -variant altgr-intl -option nodeadkeys
 xrandr --output DP2 --mode 1280x1024 --left-of eDP1
 sudo synclient TouchpadOff=1
+sshuttle -r username@sshserver 0/0
