@@ -156,7 +156,7 @@ bar {
 ### custom stuff ###
 ####################
 #
-# Test 
+# jump to window 
 bindsym $mod+w exec ~/bin/i3_find_window.rb
 
 # monitor brightness buttons
@@ -195,3 +195,6 @@ exec --no-startup-id dropboxd
 
 # keyboard us international no dead keys
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys 
+
+# desktop wallpaper
+exec --no-startup-id feh --bg-scale /home/user/multi/sinkingArch4.3.png
