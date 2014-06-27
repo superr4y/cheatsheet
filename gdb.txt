@@ -12,3 +12,7 @@ x/10i 0x12345678
 step into = si
 step over = ni
 
+
+main info sec
+info functions
+
