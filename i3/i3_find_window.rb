@@ -8,8 +8,9 @@ require 'json'
 # return an array of names followed by [id]
 def get_containers tree
     containers = []
+    #puts JSON.pretty_generate(tree)
     # try to return only useful containers
-    if (tree['nodes']+tree['floating_nodes']).empty? && tree['type'] == 2 &&
+    if (tree['nodes']+tree['floating_nodes']).empty? && tree['type'] == 'con' &&
         !(tree['name'] =~ /^i3bar for output/)
         containers << tree['name'] + " [#{tree['id']}]"
     end
@@ -20,7 +21,10 @@ def get_containers tree
 end
 
 IO.popen(['dmenu', '-i', '-p', 'window jump'], 'r+') do |dmenu|
-    dmenu.puts(get_containers(JSON.load(`i3-msg -t get_tree`)))
+    tree = `i3-msg -t get_tree`
+    json = get_containers(JSON.load(tree))
+    p json
+    dmenu.puts(json)
     dmenu.close_write
     id = dmenu.read.split(/\[(\d+)\]/)[1]
     exec "i3-msg [con_id=#{id}] focus"
