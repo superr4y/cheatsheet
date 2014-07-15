@@ -157,7 +157,7 @@ bar {
 ####################
 #
 # jump to window 
-bindsym $mod+w exec ~/bin/i3_find_window.rb
+bindsym $mod+w exec ~/.i3/i3_find_window.rb
 
 # monitor brightness buttons
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
@@ -182,6 +182,12 @@ focus_follows_mouse no
 bindsym $mod+Shift+X move scratchpad
 bindsym $mod+X scratchpad show
 
+
+# U-Bahn Query
+bindsym $mod+i exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/vrr/vrr_fahrplanauskunft.rb"
+
+
+
 # always screen on
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset dpms 0 0 0
@@ -198,3 +204,6 @@ exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
 
 # desktop wallpaper
 exec --no-startup-id feh --bg-scale /home/user/multi/sinkingArch4.3.png
+
+
+
