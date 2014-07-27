@@ -187,6 +187,10 @@ bindsym $mod+X scratchpad show
 bindsym $mod+i exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/vrr/vrr_fahrplanauskunft.rb"
 
 
+# Copyq shortcut
+bindsym $mod+c exec /usr/bin/copyq toggle
+
+
 
 # always screen on
 exec --no-startup-id xset -dpms

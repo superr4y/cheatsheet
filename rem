@@ -1,3 +1,8 @@
 solarized color:
 bgcolor=#00002b2b3636
 fgcolor=#65657b7b8383
+http://webchat.quakenet.org/?randomnick=1&channels=w000t&uio=d4
+
+
+; mplayer /home/user/bin/hacks/beep7.mp3 &> /dev/null
+/home/user/bin/hacks/weechat_beep_script.sh 'aaa'
