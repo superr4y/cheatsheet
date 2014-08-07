@@ -7,3 +7,4 @@ xrandr --output DP2 --mode 1280x1024 --left-of eDP1
 sudo synclient TouchpadOff=1
 sshuttle -r username@sshserver 0/0
 mkaurball
+sudo mount -t cifs //<ip>/<share> /mnt -o user=testuser
