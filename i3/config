@@ -207,7 +207,7 @@ exec --no-startup-id dropboxd
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys 
 
 # desktop wallpaper
-exec --no-startup-id feh --bg-scale /home/user/multi/sinkingArch4.3.png
+exec --no-startup-id feh --bg-scale /home/user/multi/myfirstwallpaper.jpg
 
 
 
