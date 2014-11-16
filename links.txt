@@ -2,6 +2,7 @@
 Links :
 ======
 http://webchat.quakenet.org/
+http://webchat.quakenet.org/?randomnick=1&channels=w000t&uio=d4
 
 
 ----
