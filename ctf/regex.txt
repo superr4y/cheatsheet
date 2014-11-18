@@ -1,0 +1,5 @@
+^(?!.*pattern)
+
+^ = Position
+?! = look ahead
+.*pattern = search pattern

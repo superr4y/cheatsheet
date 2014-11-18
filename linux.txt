@@ -15,3 +15,4 @@ find . -printf '%s %p\n'|sort -nr|head
 
 smbclient -L 127.0.0.1 -U%
 rsync -va -progress /src /dest
+sshfs user@host:/local /mnt/share
