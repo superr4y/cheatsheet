@@ -16,12 +16,12 @@ urllib2.install_opener(opener)
 for a in range(0,16):
     for b in range(0,16):
         flag = "%xb%x3bb"%(a,b)
-
+        print flag
         # Send POST request
-        req = urllib2.Request(url, data="flag=%s"%(flag), headers=header)
-        cont = urllib2.urlopen(req).read()
-        m = re.search(r'Inkorrekte Flag', cont)
-        if m:
-            print m.group()
-        else:
-            print cont
+        #req = urllib2.Request(url, data="flag=%s"%(flag), headers=header)
+        #cont = urllib2.urlopen(req).read()
+        #m = re.search(r'Inkorrekte Flag', cont)
+        #if m:
+        #    print m.group()
+        #else:
+        #    print cont

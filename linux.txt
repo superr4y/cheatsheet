@@ -16,3 +16,7 @@ find . -printf '%s %p\n'|sort -nr|head
 smbclient -L 127.0.0.1 -U%
 rsync -va -progress /src /dest
 sshfs user@host:/local /mnt/share
+
+synclient MiddleButtonAreaRight=2770 MiddleButtonAreaTop=1577 MiddleButtonAreaBottom=0 RightButtonAreaLeft=3814 RightButtonAreaTop=1577 RightButtonAreaBottom=0 TouchpadOff=1
+xmodmap -e "pointer = 2 1 3"
+
