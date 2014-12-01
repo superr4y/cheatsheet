@@ -16,3 +16,4 @@ step over = ni
 main info sec
 info functions
 
+x/xw address
