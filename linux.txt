@@ -20,3 +20,5 @@ sshfs user@host:/local /mnt/share
 synclient MiddleButtonAreaRight=2770 MiddleButtonAreaTop=1577 MiddleButtonAreaBottom=0 RightButtonAreaLeft=3814 RightButtonAreaTop=1577 RightButtonAreaBottom=0 TouchpadOff=1
 xmodmap -e "pointer = 2 1 3"
 
+du -hsx * | sort -rh | head -10
+
