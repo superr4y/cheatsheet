@@ -1,0 +1,4 @@
+configure terminal
+
+line con 0
+ logging synchronous
