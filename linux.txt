@@ -8,7 +8,7 @@ sudo synclient TouchpadOff=1
 sshuttle -r username@sshserver 0/0
 mkaurball
 sudo mount -t cifs //<ip>/<share> /mnt -o user=testuser
-rdesktop -g 1200x800 -P -z -x l -r sound:off -r clipboard:CLIPBOARD -u user 192.168.1.101:3389
+rdesktop -g 1200x800 -P -z -x l -r sound:off -r clipboard:PRIMARYCLIPBOARD -u user 192.168.1.101:3389
 find . -printf '%s %p\n'|sort -nr|head
 
 "//192.168.56.1/share /mnt/share cifs rw,user,credentials=/root/.smbcredentials,uid=user,gid=user,file_mode=0777,dir_mode=0777 0 0"  
