@@ -1,0 +1,6 @@
+docker run -i -t --name test001 -h testbox debian /bin/bash
+docker rm <name>
+docker run --privileged=true -i -t --name mydocker image /bin/bash
+docker start/stop/attach mydocker
+docker commit -m "my message" mydocker superr4y/new_image
+
