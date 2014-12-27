@@ -45,10 +45,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+#bindsym $mod+Left focus left
+#bindsym $mod+Down focus down
+#bindsym $mod+Up focus up
+#bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -189,6 +189,10 @@ focus_follows_mouse no
 #Scrantch Pad bindings
 bindsym $mod+Shift+X move scratchpad
 bindsym $mod+X scratchpad show
+
+# Move Workspace to left right monitor
+bindsym $mod+Left exec i3-msg move workspace to output left
+bindsym $mod+Right exec i3-msg move workspace to output Right
 
 
 # U-Bahn Query

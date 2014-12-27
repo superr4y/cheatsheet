@@ -9,5 +9,8 @@ sc start <service>
 sc stop <service>
 sc config <service> start=[auto|enable|disable]
 
+edsiedit.
 
 
+Allow Powershell Script:
+set-executionpolicy unrestricted
