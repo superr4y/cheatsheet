@@ -28,6 +28,43 @@ floating_modifier $mod
 bindsym $mod+Return exec konsole
 
 
+
+
+
+
+
+
+
+## STARTUP ##
+# always screen on
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset dpms 0 0 0
+exec --no-startup-id xset s off
+
+# network-manager
+#exec --no-startup-id nm-applet
+
+# dropbox
+#exec --no-startup-id dropboxd
+
+# keyboard us international no dead keys
+exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys 
+
+# desktop wallpaper
+#exec --no-startup-id feh --bg-scale /home/user/multi/myfirstwallpaper.jpg
+
+# start lsyncd
+exec --no-startup-id lsyncd ~/.lsyncd.conf 
+
+
+
+
+
+
+
+
+
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -92,14 +129,14 @@ bindsym $mod+a focus parent
 exec i3-msg 'rename workspace 1 to "1:sh"'
 exec i3-msg 'rename workspace 2 to "2:www"'
 exec i3-msg 'rename workspace 3 to "3:uni"'
-exec i3-msg 'rename workspace 4 to "4:emacs"'
+exec i3-msg 'rename workspace 4 to "4:todo"'
 exec i3-msg 'rename workspace 8 to "8:vms"'
 
 # switch to workspace
 bindsym $mod+1 workspace 1:sh
 bindsym $mod+2 workspace 2:www
 bindsym $mod+3 workspace 3:uni
-bindsym $mod+4 workspace 4:emacs
+bindsym $mod+4 workspace 4:todo
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -111,7 +148,7 @@ bindsym $mod+0 workspace 10
 bindsym $mod+Shift+1 move container to workspace 1:sh
 bindsym $mod+Shift+2 move container to workspace 2:www
 bindsym $mod+Shift+3 move container to workspace 3:uni
-bindsym $mod+Shift+4 move container to workspace 4:emacs
+bindsym $mod+Shift+4 move container to workspace 4:todo
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -202,24 +239,6 @@ bindsym $mod+i exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/vrr/vrr_fahrplanaus
 # Copyq shortcut
 bindsym $mod+c exec /usr/bin/copyq toggle
 
-
-
-# always screen on
-exec --no-startup-id xset -dpms
-exec --no-startup-id xset dpms 0 0 0
-exec --no-startup-id xset s off
-
-# network-manager
-#exec --no-startup-id nm-applet
-
-# dropbox
-#exec --no-startup-id dropboxd
-
-# keyboard us international no dead keys
-exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys 
-
-# desktop wallpaper
-#exec --no-startup-id feh --bg-scale /home/user/multi/myfirstwallpaper.jpg
 
 
 
