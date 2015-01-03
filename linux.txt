@@ -25,10 +25,10 @@ du -hsx * | sort -rh | head -10
 
 OpenSSL:
 Create keypair and csr
-openssl req -out martin.csr -new -newkey rsa:2048 -nodes -keyout martin.private.key                    
+openssl req -out my.csr -new -newkey rsa:2048 -nodes -keyout my.private.key                    
 
 From csr to crt
-openssl x509 -req -days 20 -in martin.csr -CA bruce.crt -CAkey bruce.key -set_serial 01 -out martin.crt
+openssl x509 -req -days 20 -in my.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out my.crt
 
 From crt and key to pkcs12
 openssl pkcs12 -export -in my.crt -inkey my.private.key -out my.pfx -certfile ca.crt
