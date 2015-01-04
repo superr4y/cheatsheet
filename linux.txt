@@ -34,3 +34,5 @@ From crt and key to pkcs12
 openssl pkcs12 -export -in my.crt -inkey my.private.key -out my.pfx -certfile ca.crt
 
 
+
+invoke-rc.d transmission-daemon reload
