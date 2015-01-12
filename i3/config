@@ -205,7 +205,7 @@ bar {
 bindsym $mod+w exec ~/.i3/i3_find_window.rb
 
 # tmsu binding
-bindsym $mod+shift+t exec python2 ~/.i3/tmsu_dmenu.py
+bindsym $mod+shift+t exec ~/.i3/tmsu_dmenu.py
 
 # monitor brightness buttons
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
