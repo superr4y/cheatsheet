@@ -234,6 +234,9 @@ bindsym $mod+X scratchpad show
 bindsym $mod+Left exec i3-msg move workspace to output left
 bindsym $mod+Right exec i3-msg move workspace to output Right
 
+# Zim quick note plugin
+bindsym $mod+n exec zim --plugin quicknote --notebook ~/owncloud/notes --page quicknotes --input clipboard --append true
+
 
 # U-Bahn Query
 bindsym $mod+i exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/vrr/vrr_fahrplanauskunft.rb"
@@ -241,7 +244,4 @@ bindsym $mod+i exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/vrr/vrr_fahrplanaus
 
 # Copyq shortcut
 bindsym $mod+c exec /usr/bin/copyq toggle
-
-
-
 
