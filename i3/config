@@ -162,7 +162,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -238,8 +238,13 @@ bindsym $mod+Right exec i3-msg move workspace to output Right
 bindsym $mod+n exec zim --plugin quicknote --notebook ~/owncloud/notes --page quicknotes --input clipboard --append true
 
 
+# GPG Clipboard integration
+bindsym $mod+shift+e exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/gpg_clipboard_pipe.py encrypt"
+bindsym $mod+shift+d exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/gpg_clipboard_pipe.py decrypt"
+
+
 # U-Bahn Query
-bindsym $mod+i exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/vrr/vrr_fahrplanauskunft.rb"
+#bindsym $mod+i exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/vrr/vrr_fahrplanauskunft.rb"
 
 
 # Copyq shortcut
