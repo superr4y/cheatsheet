@@ -15,7 +15,6 @@ compinit
 # End of lines added by compinstall
 
 
-
 unset SSH_ASKPASS
 
 # aliases
