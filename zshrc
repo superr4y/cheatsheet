@@ -14,4 +14,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+
+
 unset SSH_ASKPASS
+
+# aliases
+
+alias wifi='sudo killall dhclient ; sudo systemctl restart wpa_supplicant ; sudo dhclient wlp4s0'

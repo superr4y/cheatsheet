@@ -127,34 +127,40 @@ bindsym $mod+a focus parent
 
 # rename workspaces
 exec i3-msg 'rename workspace 1 to "1:sh"'
-exec i3-msg 'rename workspace 2 to "2:www"'
-exec i3-msg 'rename workspace 3 to "3:uni"'
-exec i3-msg 'rename workspace 4 to "4:todo"'
-exec i3-msg 'rename workspace 8 to "8:vms"'
+exec i3-msg 'rename workspace 2 to "2:vbox"'
+exec i3-msg 'rename workspace 3 to "3:linux"'
+exec i3-msg 'rename workspace 4 to "4:windows"'
+exec i3-msg 'rename workspace 5 to "5:bsd"'
 
 # switch to workspace
 bindsym $mod+1 workspace 1:sh
-bindsym $mod+2 workspace 2:www
-bindsym $mod+3 workspace 3:uni
-bindsym $mod+4 workspace 4:todo
-bindsym $mod+5 workspace 5
+bindsym $mod+2 workspace 2:vbox
+bindsym $mod+3 workspace 3:linux
+bindsym $mod+4 workspace 4:windows
+bindsym $mod+5 workspace 5:bsd
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8:vms
+bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1:sh
-bindsym $mod+Shift+2 move container to workspace 2:www
-bindsym $mod+Shift+3 move container to workspace 3:uni
-bindsym $mod+Shift+4 move container to workspace 4:todo
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+2 move container to workspace 2:vbox
+bindsym $mod+Shift+3 move container to workspace 3:linux
+bindsym $mod+Shift+4 move container to workspace 4:windows
+bindsym $mod+Shift+5 move container to workspace 5:bsd
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8:vms
+bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+# automatically move windows to workspaces
+for_window [title="Oracle VM VirtualBox Manager"] move to workspace "2:vbox" 
+for_window [title=".*ArchLinux.*"] move to workspace "3:linux" 
+for_window [title=".*window7.*"] move to workspace "4:windows" 
+for_window [title=".*BSD.*"] move to workspace "5:bsd" 
 
 
 # reload the configuration file
