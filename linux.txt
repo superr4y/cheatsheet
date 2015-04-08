@@ -36,3 +36,34 @@ openssl pkcs12 -export -in my.crt -inkey my.private.key -out my.pfx -certfile ca
 
 
 invoke-rc.d transmission-daemon reload
+
+
+
+
+
+network={
+    ssid="eduroam"
+      scan_ssid=1
+        key_mgmt=WPA-EAP
+          eap=TTLS
+            anonymous_identity="anonymous@ruhr-uni-bochum.de"
+
+              # identity settings:
+                identity="@ruhr-uni-bochum.de"
+                  password=""
+                      # path to CA certificate:
+                        ca_cert="/etc/ssl/certs/Deutsche_Telekom_Root_CA_2.pem"
+
+                          #    phase2="auth=PAP" # INSECURE
+                            phase2="auth=MSCHAPV2" # LESS INSECURE
+
+                              proto=RSN WPA 
+                                mode=0
+                                  pairwise=CCMP TKIP
+                                    group=CCMP TKIP
+
+                                      # check correct certificate
+                                        subject_match="/C=DE/ST=Nordrhein-Westfalen/L=Bochum/O=Ruhr-Universitaet Bochum/CN=radius.ruhr-uni-bochum.de"
+
+                                          priority=5
+}
