@@ -1,0 +1,4 @@
+#xrandr --output DP2-3 --off
+xrandr --output VGA-0 --mode 1920x1080
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+exec i3
