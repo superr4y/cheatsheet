@@ -157,10 +157,10 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # automatically move windows to workspaces
-for_window [title="Oracle VM VirtualBox Manager"] move to workspace "2:vbox" 
-for_window [title=".*ArchLinux.*"] move to workspace "3:linux" 
-for_window [title=".*window7.*"] move to workspace "4:windows" 
-for_window [title=".*BSD.*"] move to workspace "5:bsd" 
+#for_window [title="Oracle VM VirtualBox Manager"] move to workspace "2:vbox" 
+#for_window [title=".*ArchLinux.*"] move to workspace "3:linux" 
+#for_window [title=".*window7.*"] move to workspace "4:windows" 
+#for_window [title=".*BSD.*"] move to workspace "5:bsd" 
 
 
 # reload the configuration file
@@ -208,26 +208,30 @@ bar {
 ####################
 #
 # jump to window 
-bindsym $mod+w exec ~/.i3/i3_find_window.rb
+#bindsym $mod+w exec ~/.i3/i3_find_window.rb
+
+# Play Flash Videos on OpenBSD
+bindsym $mod+shift+n exec xclip -o | xargs get_flash_videos -y -p 
 
 # tmsu binding
-bindsym $mod+shift+t exec ~/.i3/tmsu_dmenu.py
+#bindsym $mod+shift+t exec ~/.i3/tmsu_dmenu.py
 
 # monitor brightness buttons
-bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 10
+#bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
+#bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 10
 
 # volume buttons
-bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
-bindsym XF86AudioLowerVolume exec amixer set Master 5%-
-bindsym XF86AudioMute exec amixer set Master 0
+#bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+#bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+#bindsym XF86AudioMute exec amixer set Master 0
 
 # Touch Pad on/off
-bindsym $mod+Shift+m exec /usr/bin/synclient TouchpadOff=1
-bindsym $mod+m exec /usr/bin/synclient TouchpadOff=0
+bindsym $mod+Shift+m exec synclient TouchpadOff=1
+bindsym $mod+m exec synclient TouchpadOff=0
 
 # lock screen
-bindsym $mod+z exec i3lock -c 090920 -d
+# bindsym $mod+z exec i3lock -c 090920 -d
+bindsym $mod+z exec slock
 
 # Don't switch focus if mouse over a other window (only if clicked)
 focus_follows_mouse no
@@ -239,14 +243,16 @@ bindsym $mod+X scratchpad show
 # Move Workspace to left right monitor
 bindsym $mod+Left exec i3-msg move workspace to output left
 bindsym $mod+Right exec i3-msg move workspace to output Right
+bindsym $mod+Up exec i3-msg move workspace to output Up
+bindsym $mod+Down exec i3-msg move workspace to output Down
 
 # Zim quick note plugin
-bindsym $mod+n exec zim --plugin quicknote --notebook ~/owncloud/notes --page quicknotes --input clipboard --append true
+#bindsym $mod+n exec zim --plugin quicknote --notebook ~/owncloud/notes --page quicknotes --input clipboard --append true
 
 
 # GPG Clipboard integration
-bindsym $mod+shift+e exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/gpg_clipboard_pipe.py encrypt"
-bindsym $mod+shift+d exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/gpg_clipboard_pipe.py decrypt"
+#bindsym $mod+shift+e exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/gpg_clipboard_pipe.py encrypt"
+#bindsym $mod+shift+d exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/gpg_clipboard_pipe.py decrypt"
 
 
 # U-Bahn Query
@@ -254,5 +260,5 @@ bindsym $mod+shift+d exec /usr/bin/xterm -fn 10x20 -e "~/bin/hacks/gpg_clipboard
 
 
 # Copyq shortcut
-bindsym $mod+c exec /usr/bin/copyq toggle
+#bindsym $mod+c exec /usr/bin/copyq toggle
 
