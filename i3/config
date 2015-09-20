@@ -51,13 +51,14 @@ exec --no-startup-id xset s off
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys 
 
 # desktop wallpaper
-#exec --no-startup-id feh --bg-scale /home/user/multi/myfirstwallpaper.jpg
+exec --no-startup-id feh --bg-scale /home/user/img/ubuntu_dark_v2.jpg
 
 # start lsyncd
 exec --no-startup-id lsyncd ~/.lsyncd.conf 
 
 
-
+# start redshift
+exec --no-startup-id redshift
 
 
 
@@ -134,27 +135,27 @@ exec i3-msg 'rename workspace 5 to "5:bsd"'
 
 # switch to workspace
 bindsym $mod+1 workspace 1:sh
-bindsym $mod+2 workspace 2:vbox
-bindsym $mod+3 workspace 3:linux
-bindsym $mod+4 workspace 4:windows
-bindsym $mod+5 workspace 5:bsd
+bindsym $mod+2 workspace 2:www
+bindsym $mod+3 workspace 3:notes
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+9 workspace 9:vm
+bindsym $mod+0 workspace 10:music
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1:sh
-bindsym $mod+Shift+2 move container to workspace 2:vbox
-bindsym $mod+Shift+3 move container to workspace 3:linux
-bindsym $mod+Shift+4 move container to workspace 4:windows
-bindsym $mod+Shift+5 move container to workspace 5:bsd
+bindsym $mod+Shift+2 move container to workspace 2:www
+bindsym $mod+Shift+3 move container to workspace 3:notes
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+9 move container to workspace 9:vm
+bindsym $mod+Shift+0 move container to workspace 10:music
 
 # automatically move windows to workspaces
 #for_window [title="Oracle VM VirtualBox Manager"] move to workspace "2:vbox" 
@@ -211,19 +212,19 @@ bar {
 #bindsym $mod+w exec ~/.i3/i3_find_window.rb
 
 # Play Flash Videos on OpenBSD
-bindsym $mod+shift+n exec xclip -o | xargs get_flash_videos -y -p 
+#bindsym $mod+shift+n exec xclip -o | xargs get_flash_videos -y -p 
 
 # tmsu binding
 #bindsym $mod+shift+t exec ~/.i3/tmsu_dmenu.py
 
 # monitor brightness buttons
-#bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
-#bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 10
 
 # volume buttons
-#bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
-#bindsym XF86AudioLowerVolume exec amixer set Master 5%-
-#bindsym XF86AudioMute exec amixer set Master 0
+bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 5%-
+bindsym XF86AudioMute exec amixer -D pulse set Master 0
 
 # Touch Pad on/off
 bindsym $mod+Shift+m exec synclient TouchpadOff=1

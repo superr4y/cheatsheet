@@ -1,0 +1,18 @@
+[Unit]
+Description=User resume actions
+Afger=sleep.target
+After=suspend.target
+After=hibernate.target
+After=hybrid-sleep.target
+
+
+[Service]
+User=%I
+Type=simple
+ExecStart=/home/user/bin/cheatsheet/systemd/resume_kvm_vms.sh
+
+[Install]
+WanntedBy=sleep.target
+WanntedBy=suspend.target
+WanntedBy=hibernate.target
+WanntedBy=hybrid-sleep.target

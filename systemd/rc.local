@@ -1,0 +1,7 @@
+for device in LID IGBE XHCI EHC1 EHC2 EXP2 EXP3; do
+        grep $device /proc/acpi/wakeup | grep enabled > /dev/null && {
+                echo Disabling wakeup on $device
+                echo $device > /proc/acpi/wakeup
+        }
+done
+

@@ -1,0 +1,15 @@
+[Unit]
+Description=User suspend actions
+Before=sleep.target
+Before=suspend.target
+Before=hybrid-sleep.target
+Before=hibernate.target
+
+[Service]
+ExecStart=/home/user/bin/cheatsheet/systemd/suspend_kvm_vms.sh
+
+[Install]
+WantedBy=sleep.target
+Wantedby=suspend.target
+WantedBy=hybrid-sleep.target
+WantedBy=hibernate.target
