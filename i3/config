@@ -58,7 +58,7 @@ exec --no-startup-id lsyncd ~/.lsyncd.conf
 
 
 # start redshift
-exec --no-startup-id redshift
+#exec --no-startup-id redshift
 
 
 

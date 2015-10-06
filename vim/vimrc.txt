@@ -12,11 +12,11 @@ set hlsearch
 set incsearch
 set wildmenu
 set nocompatible      " We're running Vim, not Vi!
-set spell spelllang=de,en
+" set spell spelllang=de,en
 set spell!
 
-"set background=dark
-colorscheme darkblue
+" set background=dark
+" colorscheme darkblue
 filetype off          " Enable filetype detection
 
 filetype indent on    " Enable filetype-specific indenting
@@ -28,6 +28,7 @@ autocmd FileType perl map <F5> :w<CR>:!perl "%"<CR>
 autocmd FileType ruby map <F5> :w<CR>:!ruby "%"<CR>
 autocmd FileType tex map <F5> :w<CR>:!pdflatex %<CR>
 autocmd FileType c map <F5> :w<CR>:!gcc % -o %.bin;./%.bin<CR>
+autocmd FileType go map <F5> :w<CR>:!./make.sh "%"<CR>
 "autocmd FileType tex map <F5> :w<CR>:!pdflatex "%"<CR>
 
 " follow function
