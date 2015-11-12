@@ -41,6 +41,16 @@
 *color7:       #b0b8c0
 *color15:      #e0e8f0
 
+
+! Xft settings 
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+
 ! urxvt
 URxvt.perl-ext-common: default,font-size,clipboard
 

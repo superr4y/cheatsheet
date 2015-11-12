@@ -27,37 +27,37 @@ autocmd FileType python map <F5> :w<CR>:!python "%"<CR>
 autocmd FileType perl map <F5> :w<CR>:!perl "%"<CR>
 autocmd FileType ruby map <F5> :w<CR>:!ruby "%"<CR>
 autocmd FileType tex map <F5> :w<CR>:!pdflatex %<CR>
-autocmd FileType c map <F5> :w<CR>:!gcc % -o %.bin;./%.bin<CR>
+"autocmd FileType c map <F5> :w<CR>:!gcc % -o %.bin;./%.bin<CR>
+autocmd FileType c map <F5> :w<CR>:!make<CR>
 autocmd FileType go map <F5> :w<CR>:!./make.sh "%"<CR>
 "autocmd FileType tex map <F5> :w<CR>:!pdflatex "%"<CR>
+
 
 " follow function
 map <c-f> <c-]> 
 
-" write file
+
+" ####### relax pinky ########
+
+" save file
 map <Leader>w <Esc>:w<CR>
 
 " copy and past
 map <Leader>c "+y
 map <Leader>v "+p
+map <Leader><Leader> <c-d>
+
+" remap esc
+imap jk <esc>
+
+" quit
+map <Leader>q :q<cr>
+
+" source vimrc
+map <Leader>s :so ~/.vimrc<Cr>
+
+" ################################
 
 " Hexview
 map <Leader>x <Esc>:%!xxd<Cr>
 map <Leader>X <Esc>:%!xxd -r<Cr>
-
-
-"" Plugins
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-"
-"" let Vundle manage Vundle, required
-"Plugin 'gmarik/vundle'
-"
-"Bundle 'https://github.com/kien/ctrlp.vim'
-"Bundle 'https://github.com/scrooloose/nerdtree.git'
-"Bundle 'https://github.com/Valloric/YouCompleteMe'
-""Bundle 'https://github.com/davidhalter/jedi-vim'
-""Bundle 'surround'
-""Bundle 'endwise'
-""Bundle 'https://github.com/altercation/vim-colors-solarized.git'
-
