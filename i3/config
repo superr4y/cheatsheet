@@ -222,9 +222,12 @@ bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 10
 
 # volume buttons
-bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 5%+
-bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 5%-
-bindsym XF86AudioMute exec amixer -D pulse set Master 0
+#bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 5%+
+#bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 5%-
+#bindsym XF86AudioMute exec amixer -D pulse set Master 0
+bindsym XF86AudioRaiseVolume exec amixer -c 1 sset Master 5%+
+bindsym XF86AudioLowerVolume exec amixer -c 1 sset Master 5%-
+bindsym XF86AudioMute exec amixer -c 1 sset Master 0 
 
 # Touch Pad on/off
 bindsym $mod+Shift+m exec synclient TouchpadOff=1
