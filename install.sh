@@ -7,3 +7,4 @@ ln -s $(pwd)/vim/vimrc.txt ~/.vimrc
 mkdir ~/.urxvt
 mkdir ~/.urxvt/ext
 ln -s $(pwd)/urxvt/urxvt_clipboard ~/.urxvt/ext/clipboard
+ln -s $(pwd)/zshrc ~/.zshrc
