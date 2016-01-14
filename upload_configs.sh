@@ -9,3 +9,4 @@ ssh_login="$1"
 
 scp ~/.vimrc "$ssh_login":.vimrc
 scp ~/.tmux.conf "$ssh_login":.tmux.conf
+scp ~/.zshrc "$ssh_login":.zshrc

@@ -23,7 +23,6 @@ prompt bigfade theme blue
 
 unset SSH_ASKPASS
 
-
 # History Settings
 HISTSIZE="2000"
 HISTFILE="$HOME/.history"
@@ -33,7 +32,14 @@ setopt hist_ignore_space
 bindkey "^R" history-incremental-search-backward
 
 # aliases
+alias ls='ls --color=auto'
+alias ll='ls -lh'
+alias rs='rsync -arv --progress'
 
 # alias wifi='sudo killall dhclient ; sudo systemctl restart wpa_supplicant ; sudo dhclient wlp4s0'
 
+
+h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }
+
+export EDITOR=/usr/bin/vim
 
