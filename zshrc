@@ -50,6 +50,7 @@ bindkey "^R" history-incremental-search-backward
 alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias rs='rsync -arv --progress'
+alias ssh-p='ssh -o PreferredAuthentications=password'
 
 # alias wifi='sudo killall dhclient ; sudo systemctl restart wpa_supplicant ; sudo dhclient wlp4s0'
 
@@ -70,11 +71,13 @@ h2zim() {
 
     # you may setopt inc_append_history and share_history in .zshrc
     # save the history to zim wiki
-    # cat ~/.history >> $history_entry
-    history -n -E >> $history_entry
+    cat ~/.history >> $history_entry
+    #history -n -E >> $history_entry
 
     # clear the history
     echo "" > ~/.history
 }
 
-
+settitle() {
+    echo -en "\e]2;$1\a"
+}
