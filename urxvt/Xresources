@@ -41,7 +41,7 @@
 *color7:       #b0b8c0
 *color15:      #e0e8f0
 
-*dpi: 120
+*dpi: 100
 
 ! urxvt
 URxvt.perl-ext-common: default,clipboard
@@ -53,6 +53,8 @@ URxvt*internalBorder: 22
 URxvt*matcher.button: 1
 URxvt*scrollBar: false
 URxvt*url-launcher: /usr/bin/firefox
+! URxvt*depth: 32
+! URxvt*background: rgba: 0000/0000/0200/0200
 
 
 URxvt.iso14755: False
