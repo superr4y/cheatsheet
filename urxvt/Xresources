@@ -41,18 +41,10 @@
 *color7:       #b0b8c0
 *color15:      #e0e8f0
 
-
-! Xft settings 
-
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintslight
-
+*dpi: 120
 
 ! urxvt
-URxvt.perl-ext-common: default,font-size,clipboard
+URxvt.perl-ext-common: default,clipboard
 
 URxvt*boldFont: -*-profont-*-*-*-*-12-*-*-*-*-*-*-*
 URxvt*cursorBlink: true
@@ -72,5 +64,5 @@ URxvt.keysym.M-c:   perl:clipboard:copy
 URxvt.keysym.M-v:   perl:clipboard:paste
 
 
-URxvt.keysym.M-Up:     perl:font-size:increase
-URxvt.keysym.M-Down:   perl:font-size:decrease
+! URxvt.keysym.M-Up:     perl:font-size:increase
+! URxvt.keysym.M-Down:   perl:font-size:decrease

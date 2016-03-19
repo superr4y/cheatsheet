@@ -51,6 +51,7 @@ alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias rs='rsync -arv --progress'
 alias ssh-p='ssh -o PreferredAuthentications=password'
+alias backup=duplicity --encrypt-key "7CAE216D" --sign-key "69E7ED06"
 
 # alias wifi='sudo killall dhclient ; sudo systemctl restart wpa_supplicant ; sudo dhclient wlp4s0'
 
