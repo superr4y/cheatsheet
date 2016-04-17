@@ -23,13 +23,14 @@ filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
 "autocmd FileT/ype python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
-autocmd FileType python map <F5> :w<CR>:!python "%"<CR>
+autocmd FileType python map <F5> :w<CR>:!python2 "%"<CR>
 autocmd FileType perl map <F5> :w<CR>:!perl "%"<CR>
 autocmd FileType ruby map <F5> :w<CR>:!ruby "%"<CR>
 autocmd FileType tex map <F5> :w<CR>:!pdflatex %<CR>
 "autocmd FileType c map <F5> :w<CR>:!gcc % -o %.bin;./%.bin<CR>
 autocmd FileType c map <F5> :w<CR>:!make<CR>
 autocmd FileType go map <F5> :w<CR>:!./make.sh "%"<CR>
+autocmd FileType dot map <F5> :w<CR>:!dot -Tps "%" -o "%".ps<CR>
 "autocmd FileType tex map <F5> :w<CR>:!pdflatex "%"<CR>
 
 
