@@ -3,8 +3,8 @@
 !!
 !
 !! special
-*foreground:   #687078
-!*foreground:   #ffffff
+!*foreground:   #687078
+*foreground:   #d0d0e0
 *background:   #202830
 !*background:   #000000
 *cursorColor:  #4d8080

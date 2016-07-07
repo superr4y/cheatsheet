@@ -94,10 +94,9 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec /home/user/bin/rofi-wrapper.sh
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 40 -padding 30 -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#5294E2" -font "System San Francisco Display 18"
+bindsym $mod+d exec /home/user/bin/rofi-wrapper.sh run
+bindsym $mod+w exec /home/user/bin/rofi-wrapper.sh window
 
-bindsym $mod+w exec rofi -show window -lines 3 -eh 2 -width 40 -padding 30 -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#5294E2" -font "System San Francisco Display 18"
 #bindsym $mod+w exec rofi -show window
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -166,7 +165,7 @@ bindsym $mod+1 workspace 1:sh
 bindsym $mod+2 workspace 2:www
 bindsym $mod+3 workspace 3:notes
 bindsym $mod+4 workspace 4:uni
-bindsym $mod+5 workspace 5:uni2
+bindsym $mod+5 workspace 5:chat
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -178,7 +177,7 @@ bindsym $mod+Shift+1 move container to workspace 1:sh
 bindsym $mod+Shift+2 move container to workspace 2:www
 bindsym $mod+Shift+3 move container to workspace 3:notes
 bindsym $mod+Shift+4 move container to workspace 4:uni
-bindsym $mod+Shift+5 move container to workspace 5:uni2
+bindsym $mod+Shift+5 move container to workspace 5:chat
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -258,8 +257,11 @@ bindsym $mod+u mode "$display_mode"
 #bindsym $mod+shift+t exec ~/.i3/tmsu_dmenu.py
 
 # monitor brightness buttons
-bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 10
+#bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
+#bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec /home/user/bin/brightness.sh +10
+bindsym XF86MonBrightnessDown exec /home/user/bin/brightness.sh -10
+
 
 # volume buttons
 #bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 5%+
