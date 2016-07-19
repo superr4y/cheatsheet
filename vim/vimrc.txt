@@ -1,3 +1,4 @@
+execute pathogen#infect() 
 let mapleader = " " " space is <Leader>-Key
 
 set number
@@ -12,6 +13,7 @@ set hlsearch
 set incsearch
 set wildmenu
 set nocompatible      " We're running Vim, not Vi!
+set synmaxcol=120     " Disable syntax hl for long lines
 " set spell spelllang=de,en
 " set spell!
 
@@ -62,3 +64,5 @@ map <Leader>s :so ~/.vimrc<Cr>
 " Hexview
 map <Leader>x <Esc>:%!xxd<Cr>
 map <Leader>X <Esc>:%!xxd -r<Cr>
+
+
