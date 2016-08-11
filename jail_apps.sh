@@ -22,6 +22,6 @@ for i in ${profile_apps[@]}; do
     create_jail "$i" "--profile=/etc/firejail/$i.profile"
 done
 
-create_jail "okular" "--seccomp"
+#create_jail "okular" "--seccomp"
 create_jail "quodlibet" "--seccomp"
 create_jail "slack" ""

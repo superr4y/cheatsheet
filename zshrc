@@ -44,11 +44,13 @@ prompt bigfade theme blue
 
 unset SSH_ASKPASS
 
-bindkey "^R" history-incremental-search-backward
+bindkey "^R" history-incremental-pattern-search-backward 
+bindkey "^E" history-incremental-pattern-search-forward
 
 # aliases
 alias ls='ls --color=auto'
 alias ll='ls -lh'
+alias l='tyls'
 alias rs='rsync -arv --progress'
 alias ssh-p='ssh -o PreferredAuthentications=password'
 alias backup=duplicity --encrypt-key "7CAE216D" --sign-key "69E7ED06"
