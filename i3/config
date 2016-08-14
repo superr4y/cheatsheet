@@ -53,10 +53,10 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 ## STARTUP ##
 
 # transparent
-exec --no-startup-id compton
+#exec --no-startup-id compton
 
 # urxvt daemon
-exec --no-startup-id urxvtd -f
+#exec --no-startup-id urxvtd -f
 
 # always screen on
 exec --no-startup-id xset -dpms
@@ -68,6 +68,9 @@ exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &
 
 # network-manager
 exec --no-startup-id nm-applet
+
+# dunst
+exec --no-startup-id dunst
 
 # dropbox
 #exec --no-startup-id dropboxd
@@ -241,15 +244,18 @@ bar {
 #
 
 # mode to manage external screens
-set $display_mode Ext Screen (v) VGA ON, (d) DVI ON, (x) External OFF
+set $display_mode Ext Screen (v) VGA ON, (d) DVI ON, (x) External OFF (r) redshift on (u) redshift off 
 mode "$display_mode" {
-    bindsym v exec --no-startup-id xrandr --output DP2-3 --mode 1280x1024 --left-of DP2-2
-    bindsym d exec --no-startup-id xrandr --output DP2-2 --mode 1920x1080 --above eDP1
-    bindsym x exec --no-startup-id xrandr --output DP2-3 --off --output DP2-2 --off
+    bindsym v exec --no-startup-id xrandr --output DP-2-3 --auto --left-of DP-2-2
+    bindsym d exec --no-startup-id xrandr --output DP-2-2 --auto --above eDP-1
+    bindsym x exec --no-startup-id xrandr --output DP-2-3 --off --output DP-2-2 --off
+    bindsym r exec --no-startup-id redshift
+    bindsym u exec --no-startup-id killall redshift && redshift -x
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 bindsym $mod+u mode "$display_mode" 
+
 
 
 # Play Flash Videos on OpenBSD
