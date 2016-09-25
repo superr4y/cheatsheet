@@ -84,3 +84,4 @@ h2zim() {
 settitle() {
     echo -en "\e]2;$1\a"
 }
+export PATH=$PATH:/home/user/uni/llvm-stuff/llvm-install/bin

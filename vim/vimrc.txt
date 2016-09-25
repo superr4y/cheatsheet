@@ -13,7 +13,7 @@ set hlsearch
 set incsearch
 set wildmenu
 set nocompatible      " We're running Vim, not Vi!
-set synmaxcol=120     " Disable syntax hl for long lines
+" set synmaxcol=120     " Disable syntax hl for long lines
 " set spell spelllang=de,en
 " set spell!
 
