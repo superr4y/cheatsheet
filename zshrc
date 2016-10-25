@@ -34,8 +34,16 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-zstyle ':completion:*:descriptions' format '%U%B%d%b%u' 
-zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+#zstyle ':completion:*:descriptions' format '%U%B%d%b%u' 
+#zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*' force-list always
+
 
 
 autoload -U promptinit 
@@ -50,12 +58,18 @@ bindkey "^E" history-incremental-pattern-search-forward
 # aliases
 alias ls='ls --color=auto'
 alias ll='ls -lh'
-alias l='tyls'
 alias rs='rsync -arv --progress'
 alias ssh-p='ssh -o PreferredAuthentications=password'
-alias backup=duplicity --encrypt-key "7CAE216D" --sign-key "69E7ED06"
+alias ss=systemctl
+alias ip='ip -c'
+alias ff='find . -type f'
+alias -g gg='grep --color -in'
+alias -g xg='xargs grep --color -in'
+alias -g ...='../../'
+alias -g ....='../../../'
+alias -g .....='../../../../'
 
-# alias wifi='sudo killall dhclient ; sudo systemctl restart wpa_supplicant ; sudo dhclient wlp4s0'
+
 
 # funcitons
 h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }
