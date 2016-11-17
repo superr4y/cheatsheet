@@ -42,7 +42,7 @@ autoload -U promptinit
 promptinit
 prompt bigfade theme blue
 
-unset SSH_ASKPASS
+#unset SSH_ASKPASS
 
 bindkey "^R" history-incremental-pattern-search-backward 
 bindkey "^E" history-incremental-pattern-search-forward
@@ -54,6 +54,8 @@ alias l='tyls'
 alias rs='rsync -arv --progress'
 alias ssh-p='ssh -o PreferredAuthentications=password'
 alias backup=duplicity --encrypt-key "7CAE216D" --sign-key "69E7ED06"
+alias ms='sudo mount -o noexec,nodev,nosuid'
+
 
 # alias wifi='sudo killall dhclient ; sudo systemctl restart wpa_supplicant ; sudo dhclient wlp4s0'
 
@@ -84,4 +86,5 @@ h2zim() {
 settitle() {
     echo -en "\e]2;$1\a"
 }
-export PATH=$PATH:/home/user/uni/llvm-stuff/llvm-install/bin
+export PATH=$PATH:/home/user/bin
+umask 077
