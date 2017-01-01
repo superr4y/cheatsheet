@@ -4,6 +4,8 @@ ln -s "$(pwd)"/i3 ~/.i3
 ln -s "$(pwd)"/tmux/tmux.conf ~/.tmux.conf
 ln -s "$(pwd)"/urxvt/Xresources ~/.Xresources
 ln -s "$(pwd)"/vim/vimrc.txt ~/.vimrc
+mkdir -p ~/.vim/syntax
+ln -s "$(pwd)"/vim/rust.vim ~/.vim/syntax/rust.vim
 mkdir -p ~/.urxvt/ext
 ln -s "$(pwd)"/urxvt/urxvt_clipboard ~/.urxvt/ext/clipboard
 ln -s "$(pwd)"/zshrc ~/.zshrc
