@@ -70,6 +70,10 @@ alias -g ...='../../'
 alias -g ....='../../../'
 alias -g .....='../../../../'
 
+alias v='f -e vim'
+alias o='a -e xdg-open'
+alias j='fasd_cd -d'
+
 
 
 # funcitons
@@ -101,3 +105,6 @@ settitle() {
 }
 export PATH=$PATH:/home/user/bin
 umask 077
+
+
+eval "$(fasd --init auto)"

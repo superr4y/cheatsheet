@@ -32,6 +32,7 @@ autocmd FileType tex map <F5> :w<CR>:!pdflatex %<CR>
 autocmd FileType c map <F5> :w<CR>:!make<CR>
 autocmd FileType go map <F5> :w<CR>:!./make.sh "%"<CR>
 autocmd FileType dot map <F5> :w<CR>:!dot -Tps "%" -o "%".ps<CR>
+autocmd FileType rust map <F5> :w<CR>:!cargo run<CR>
 "autocmd FileType tex map <F5> :w<CR>:!pdflatex "%"<CR>
 
 
