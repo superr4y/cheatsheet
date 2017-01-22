@@ -80,7 +80,7 @@ exec --no-startup-id dunst
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys 
 
 # desktop wallpaper
-exec --no-startup-id feh --bg-scale /home/user/img/in_the_dark_forest.jpg
+exec --no-startup-id feh --bg-scale /home/user/img/wallpaper.JPG
 # start lsyncd
 #exec --no-startup-id lsyncd ~/.lsyncd.conf 
 
@@ -168,8 +168,8 @@ exec i3-msg 'rename workspace 5 to "5:bsd"'
 # switch to workspace
 bindsym $mod+1 workspace 1:sh
 bindsym $mod+2 workspace 2:www
-bindsym $mod+3 workspace 3:notes
-bindsym $mod+4 workspace 4:uni
+bindsym $mod+3 workspace 3:work
+bindsym $mod+4 workspace 4:work
 bindsym $mod+5 workspace 5:chat
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -180,8 +180,8 @@ bindsym $mod+0 workspace 10:music
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1:sh
 bindsym $mod+Shift+2 move container to workspace 2:www
-bindsym $mod+Shift+3 move container to workspace 3:notes
-bindsym $mod+Shift+4 move container to workspace 4:uni
+bindsym $mod+Shift+3 move container to workspace 3:work
+bindsym $mod+Shift+4 move container to workspace 4:work
 bindsym $mod+Shift+5 move container to workspace 5:chat
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -250,7 +250,7 @@ mode "$display_mode" {
     #bindsym w exec --no-startup-id xrandr --output DP-2-3 --auto --left-of DP-2-2
     bindsym w exec --no-startup-id /home/user/bin/i3work.sh
     bindsym d exec --no-startup-id /home/user/bin/i3docking.sh
-    bindsym x exec --no-startup-id xrandr --output eDP1 --auto --output DP2-1 --off --output DP2-2 --off --output DP1 --off --output VGA1 --off --output DP1-8 --off --output DP1-1 --off
+    bindsym x exec --no-startup-id xrandr --output eDP-1 --auto --output DP-2-1 --off --output DP-2-2 --off --output DP-1 --off --output VGA-1 --off --output DP-1-8 --off --output DP-1-1 --off
     bindsym r exec --no-startup-id redshift
     bindsym u exec --no-startup-id killall redshift && redshift -x
     bindsym s exec --no-startup-id /home/user/bin/i3sleep.sh
@@ -329,4 +329,5 @@ bindsym $mod+Down exec i3-msg move workspace to output Down
 
 # Copyq shortcut
 #bindsym $mod+c exec /usr/bin/copyq toggle
+
 
