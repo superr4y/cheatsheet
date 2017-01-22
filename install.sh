@@ -10,5 +10,11 @@ mkdir -p ~/.urxvt/ext
 ln -s "$(pwd)"/urxvt/urxvt_clipboard ~/.urxvt/ext/clipboard
 ln -s "$(pwd)"/zshrc ~/.zshrc
 mkdir -p ~/.zsh/cache
+
+mkdir ~/bin
+ln -s $(pwd)/wakeup_fix.sh ~/bin/wakeup_fix.sh
+ln -s $(pwd)/brightness.sh ~/bin/brightness.sh
+ln -s $(pwd)/i3/rofi-wrapper.sh ~/bin/rofi-wrapper.sh
+
 #mkdir ~/.config/dunst
 #ln -s "$(pwd)"/dunstrc ~/.config/dunst/dunstrc
