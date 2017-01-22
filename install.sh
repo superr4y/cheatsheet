@@ -16,5 +16,8 @@ ln -s $(pwd)/wakeup_fix.sh ~/bin/wakeup_fix.sh
 ln -s $(pwd)/brightness.sh ~/bin/brightness.sh
 ln -s $(pwd)/i3/rofi-wrapper.sh ~/bin/rofi-wrapper.sh
 
+mkdir ~/.config/htop
+ln -s $(pwd)/htoprc ~/.config/htop/htoprc
+
 #mkdir ~/.config/dunst
 #ln -s "$(pwd)"/dunstrc ~/.config/dunst/dunstrc
