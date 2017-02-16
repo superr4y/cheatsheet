@@ -88,7 +88,7 @@ exec --no-startup-id feh --bg-scale /home/user/img/wallpaper.JPG
 # start redshift
 #exec --no-startup-id redshift
 
-
+#exec --no-startup-id s2cctlt start
 
 
 

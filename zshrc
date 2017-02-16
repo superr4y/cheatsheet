@@ -57,6 +57,7 @@ bindkey "^E" history-incremental-pattern-search-forward
 
 # aliases
 alias ls='ls --color=auto'
+alias sl='ls --color=auto'
 alias ll='ls -lh'
 alias rs='rsync -arv --progress'
 alias ssh-p='ssh -o PreferredAuthentications=password'
