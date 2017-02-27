@@ -76,36 +76,24 @@ alias o='a -e xdg-open'
 alias j='fasd_cd -d'
 alias arm='arm-none-eabi'
 
-
-
-# funcitons
-h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }
-
-h2zim() {
-    name=$(date +"%d_%m_%Y")
-
-    prefix="/home/user/share/notes/linux"
-    history_index="$prefix/history.txt"
-    history_entry="$prefix/history/${name}.txt"
-
-    # create zim wiki entry if not already exist
-    if ! grep "$name"  "$history_index"; then
-        echo "[[+$name]]" >> $history_index
-    fi
-
-    # you may setopt inc_append_history and share_history in .zshrc
-    # save the history to zim wiki
-    cat ~/.history >> $history_entry
-    #history -n -E >> $history_entry
-
-    # clear the history
-    echo "" > ~/.history
+# docker 
+alias dkc='sudo docker-compose'
+alias dk='sudo docker'
+dkrm(){
+    # removes all not running container
+    for c in $(dk ps -a | grep Exited | awk '{print $1}'); do
+        dk rm $c;
+    done
+}
+dkrmi(){
+    # removes all images with no name
+    for c in $(dk images | grep "<none>"| awk '{print $3}'); do
+        dk rmi $c;
+    done
 }
 
-settitle() {
-    echo -en "\e]2;$1\a"
-}
+
 export PATH=$PATH:/home/user/bin
 umask 077
-
-eval "$(fasd --init auto)"
+~/bin/tmux_sessions.sh
+#eval "$(fasd --init auto)"
