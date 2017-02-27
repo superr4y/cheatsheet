@@ -1,5 +1,13 @@
-#!/bin/sh
-sessions=($(tmux ls |cut -d ' ' -f 1 | sed 's/://' | sed ':a;N;$!ba;s/\n/ /g'))
+#!/usr/bin/zsh
+sessions=($(tmux ls 2>/dev/null | cut -d ' ' -f 1 | sed 's/://' | sed ':a;N;$!ba;s/\n/ /g'))
+if [ ${#sessions} -eq 0 ]; then
+    exit 0;
+fi
+
+if [ -n "$TMUX" ]; then
+    exit 0;
+fi
+
 cat << EOF
                              ...----....
                          ..-:"''         ''"-..
@@ -51,9 +59,10 @@ cat << EOF
                    "::.::.. .. .  ...:::IIHHMMMMHMV"
                      "V::... . .I::IHHMMV"'
 EOF
-
-for i in $(seq 0 $(expr ${#sessions} - 1)); do 
+echo "Found ${#sessions}:"
+for i in $(seq 1 ${#sessions}); do 
     echo $i "-->" ${sessions[$i]}
 done
-read i
-tmux a -t ${sessions[$i]}
+
+read x
+tmux a -t ${sessions[$x]}
