@@ -59,6 +59,8 @@ cat << EOF
                    "::.::.. .. .  ...:::IIHHMMMMHMV"
                      "V::... . .I::IHHMMV"'
 EOF
+
+
 echo "Found ${#sessions}:"
 for i in $(seq 1 ${#sessions}); do 
     echo $i "-->" ${sessions[$i]}

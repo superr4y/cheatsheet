@@ -43,11 +43,7 @@ client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-col
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 
-
-
-
-
-
+#workspace_auto_back_and_forth yes
 
 
 ## STARTUP ##
@@ -268,6 +264,16 @@ mode "$sound_mode" {
     bindsym Escape mode "default"
 }
 bindsym $mod+i mode "$sound_mode" 
+
+# lang mode
+set $lang_mode (u)s, (g)erman
+mode "$lang_mode" {
+    bindsym u exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys
+    bindsym g exec --no-startup-id setxkbmap de && i3-msg mode default
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+bindsym $mod+o mode "$lang_mode"
 
 
 
