@@ -93,7 +93,7 @@ dkrmi(){
 }
 
 
-export PATH=$PATH:/home/user/bin
+export PATH=/home/user/anaconda2/bin:$PATH:/home/user/bin
 umask 077
 ~/bin/tmux_sessions.sh
 #eval "$(fasd --init auto)"

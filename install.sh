@@ -20,5 +20,8 @@ ln -s $(pwd)/tmux_sessions.sh ~/bin/tmux_sessions.sh
 mkdir ~/.config/htop
 ln -s $(pwd)/htoprc ~/.config/htop/htoprc
 
+mkdir ~/.config/termite
+ln -s $(pwd)/termite.conf ~/.config/termite/config
+
 #mkdir ~/.config/dunst
 #ln -s "$(pwd)"/dunstrc ~/.config/dunst/dunstrc
