@@ -100,6 +100,6 @@ git_checkout(){ for f in $(git status | grep modified | awk '{print $2}'); do gi
 
 
 export PATH=/home/user/anaconda2/bin:$PATH:/home/user/bin
-umask 077
+#umask 077
 ~/bin/tmux_sessions.sh
 #eval "$(fasd --init auto)"

@@ -23,5 +23,13 @@ ln -s $(pwd)/htoprc ~/.config/htop/htoprc
 mkdir ~/.config/termite
 ln -s $(pwd)/termite.conf ~/.config/termite/config
 
+
+#nvim
+mkdir -p ~/.config/nvim
+mkdir -p ~/.local/share/nvim/site/autoload/
+ln -s $(pwd)/nvim/plug.vim ~/.local/share/nvim/site/autoload/plug.vim
+ln -s $(pwd)/nvim/init.vim ~/.config/nvim/init.vim
+ln -s $(pwd)/nvim/init.vim ~/.nvimrc
+
 #mkdir ~/.config/dunst
 #ln -s "$(pwd)"/dunstrc ~/.config/dunst/dunstrc
