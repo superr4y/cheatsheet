@@ -76,6 +76,10 @@ alias o='a -e xdg-open'
 alias j='fasd_cd -d'
 alias arm='arm-none-eabi'
 
+alias vim='nvim'
+
+cclear="free && sync && echo 3 > /proc/sys/vm/drop_caches && free"
+
 # docker 
 alias dkc='sudo docker-compose'
 alias dk='sudo docker'
@@ -91,6 +95,8 @@ dkrmi(){
         dk rmi $c;
     done
 }
+
+git_checkout(){ for f in $(git status | grep modified | awk '{print $2}'); do git checkout -- "$f"; done}
 
 
 export PATH=/home/user/anaconda2/bin:$PATH:/home/user/bin
