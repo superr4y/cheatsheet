@@ -37,6 +37,7 @@ set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #5294E2
+set $sink bluez_sink.04_5D_4B_DE_25_67
 
 # window colors
 #                       border              background         text                 indicator
@@ -76,7 +77,8 @@ exec --no-startup-id dunst
 #exec --no-startup-id dropboxd
 
 # keyboard us international no dead keys
-exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys 
+#exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option nodeadkeys 
+exec --no-startup-id setxkbmap -layout us -variant altgr-intl 
 
 # desktop wallpaper
 exec --no-startup-id feh --bg-scale /home/user/img/wallpaper.JPG
@@ -259,11 +261,22 @@ mode "$display_mode" {
 bindsym $mod+u mode "$display_mode" 
 
 # sound mode
-set $sound_mode (u)p, (d)own, (m)ute
+set $sound_mode (u)p, (d)own, (m)ute, (n)ext, (p)rev, (c)onnect, (x)disconnect
 mode "$sound_mode" {
-    bindsym u exec --no-startup-id amixer -c 1 sset Master 5%+
-    bindsym d exec --no-startup-id amixer -c 1 sset Master 5%-
-    bindsym m exec --no-startup-id amixer -c 1 sset Master 0 
+    #bindsym u exec --no-startup-id amixer -c 1 sset Master 5%+
+    #bindsym d exec --no-startup-id amixer -c 1 sset Master 5%-
+    #bindsym m exec --no-startup-id amixer -c 1 sset Master 0 
+	# bluetooth headpohnes
+	bindsym u exec pactl -- set-sink-volume $sink +5%
+	bindsym d exec pactl -- set-sink-volume $sink -5%
+	bindsym m exec pactl -- set-sink-volume $sink 0
+	bindsym c exec dbus-send --system --print-reply --dest=org.bluez /org/bluez/hci0/dev_04_5D_4B_DE_25_67 org.bluez.Device1.Connect
+	bindsym x exec dbus-send --system --print-reply --dest=org.bluez /org/bluez/hci0/dev_04_5D_4B_DE_25_67 org.bluez.Device1.Disconnect
+	bindsym n exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+	bindsym p exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+	bindsym space exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+
     bindsym Escape mode "default"
 }
 bindsym $mod+i mode "$sound_mode" 
@@ -294,12 +307,27 @@ bindsym XF86MonBrightnessDown exec /home/user/bin/brightness.sh -10
 
 
 # volume buttons
+
+# bluetooth headpohnes
+bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 2 +5%
+bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 2 -5%
+bindsym XF86AudioMute exec pactl -- set-sink-volume 2 0
+bindsym XF86AudioPrev exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindsym XF86AudioNext exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+#bindsym XF86AudioPause exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+
+
+
+
 #bindsym XF86AudioRaiseVolume exec amixer -D pulse set Master 5%+
 #bindsym XF86AudioLowerVolume exec amixer -D pulse set Master 5%-
 #bindsym XF86AudioMute exec amixer -D pulse set Master 0
-bindsym XF86AudioRaiseVolume exec amixer -c 1 sset Master 5%+
-bindsym XF86AudioLowerVolume exec amixer -c 1 sset Master 5%-
-bindsym XF86AudioMute exec amixer -c 1 sset Master 0 
+#bindsym XF86AudioRaiseVolume exec amixer -c 1 sset Master 5%+
+#bindsym XF86AudioLowerVolume exec amixer -c 1 sset Master 5%-
+#bindsym XF86AudioMute exec amixer -c 1 sset Master 0 
+#XF86AudioNext
+#XF86AudioPrev
 
 # Touch Pad on/off
 bindsym $mod+Shift+m exec synclient TouchpadOff=1

@@ -80,6 +80,11 @@ alias vim='nvim'
 
 cclear="free && sync && echo 3 > /proc/sys/vm/drop_caches && free"
 
+alias vg='vagrant'
+alias venv='source ~/venv/bin/activate'
+alias todo='nvim ~/todo'
+alias uskey='setxkbmap -layout us -variant altgr-intl -option nodeadkeys'
+
 # docker 
 alias dkc='sudo docker-compose'
 alias dk='sudo docker'
@@ -103,3 +108,6 @@ export PATH=/home/user/anaconda2/bin:$PATH:/home/user/bin
 #umask 077
 ~/bin/tmux_sessions.sh
 #eval "$(fasd --init auto)"
+
+#cat ~/todo
+echo '----------------------------------'

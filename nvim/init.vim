@@ -35,15 +35,18 @@ let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
 
 
 " color
-set background=dark
-colo gruvbox
+" set background=dark
+" colo gruvbox
+set t_Co=256
+colorscheme jellybeans
+
 "set g:airline_theme='gruvbox'
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 set number
 syntax on
-set relativenumber number
+"set relativenumber number
 set undofile
 set undodir="~/.vim_undo_files"
 set noswapfile
@@ -54,7 +57,6 @@ set tabstop=4
 set smarttab
 set nosmartindent
 set foldmethod=marker
-
 set guicursor=
 
 "augroup AutoSaveFolds
@@ -63,12 +65,13 @@ set guicursor=
 "  autocmd BufWinEnter * silent loadview
 "augroup END
 
-autocmd FileType c,cpp,h,hpp,cc setlocal foldmethod=syntax
-
+"autocmd FileType c,cpp,h,hpp,cc setlocal foldmethod=syntax
+autocmd FileType dot map <F5> :w<CR>:!xdot "%"<CR>
+autocmd FileType python map <F5> :w<CR>:!python2 "%"<CR>
 
 map <Leader>c "+y
 map <Leader>v <Esc>:set paste<CR>"+p<Esc>:set nopaste<CR>
-map <Leader>s :so ~/.vimrc<Cr>
+map <Leader>s :so ~/.nvimrc<Cr>
 map <Leader>w <Esc>:w<CR>
 
 imap jk <esc>
@@ -80,3 +83,5 @@ map <esc> :noh<cr>
 
 " Plugin Mappings
 map <Leader>f <Esc>:ClangFormat<CR>
+map <Leader>b <Esc>:CtrlPBuffer<CR>
+map <Leader>p <Esc>:CtrlP<CR>
