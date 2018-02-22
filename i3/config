@@ -38,6 +38,7 @@ set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #5294E2
 set $sink bluez_sink.04_5D_4B_DE_25_67
+set $volume_changed /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 
 # window colors
 #                       border              background         text                 indicator
@@ -267,8 +268,8 @@ mode "$sound_mode" {
     #bindsym d exec --no-startup-id amixer -c 1 sset Master 5%-
     #bindsym m exec --no-startup-id amixer -c 1 sset Master 0 
 	# bluetooth headpohnes
-	bindsym u exec pactl -- set-sink-volume $sink +5%
-	bindsym d exec pactl -- set-sink-volume $sink -5%
+	bindsym u exec pactl -- set-sink-volume $sink +5% && paplay -d $sink --volume 200000 $volume_changed
+	bindsym d exec pactl -- set-sink-volume $sink -5% && paplay -d $sink --volume 200000 $volume_changed
 	bindsym m exec pactl -- set-sink-volume $sink 0
 	bindsym c exec dbus-send --system --print-reply --dest=org.bluez /org/bluez/hci0/dev_04_5D_4B_DE_25_67 org.bluez.Device1.Connect
 	bindsym x exec dbus-send --system --print-reply --dest=org.bluez /org/bluez/hci0/dev_04_5D_4B_DE_25_67 org.bluez.Device1.Disconnect
