@@ -268,8 +268,8 @@ mode "$sound_mode" {
     #bindsym d exec --no-startup-id amixer -c 1 sset Master 5%-
     #bindsym m exec --no-startup-id amixer -c 1 sset Master 0 
 	# bluetooth headpohnes
-	bindsym u exec pactl -- set-sink-volume $sink +5% && paplay -d $sink --volume 200000 $volume_changed
-	bindsym d exec pactl -- set-sink-volume $sink -5% && paplay -d $sink --volume 200000 $volume_changed
+	bindsym u exec pactl -- set-sink-volume $sink +5% && paplay -d $sink --volume 100000 $volume_changed
+	bindsym d exec pactl -- set-sink-volume $sink -5% && paplay -d $sink --volume 100000 $volume_changed
 	bindsym m exec pactl -- set-sink-volume $sink 0
 	bindsym c exec dbus-send --system --print-reply --dest=org.bluez /org/bluez/hci0/dev_04_5D_4B_DE_25_67 org.bluez.Device1.Connect
 	bindsym x exec dbus-send --system --print-reply --dest=org.bluez /org/bluez/hci0/dev_04_5D_4B_DE_25_67 org.bluez.Device1.Disconnect
@@ -336,7 +336,7 @@ bindsym $mod+m exec synclient TouchpadOff=0
 
 # lock screen
 #bindsym $mod+z exec i3lock -c 090920 -d
-bindsym $mod+z exec slock
+bindsym $mod+z exec /usr/local/bin/slock
 #bindsym $mod+z exec /usr/bin/slimlock 
 
 # Don't switch focus if mouse over a other window (only if clicked)
